@@ -42,12 +42,14 @@ public class Chirp {
     }
 
     public static int schnirpyLevel(int n) {
-	int toReturn = 0;
-	for (int j = n; j < Integer.MAX_VALUE; j++) {
-	    if (j % 2 == 0) {
-		toReturn++;
-	    }
-	}
-	return toReturn % 10;
+		int toReturn = 0;
+		toReturn = (Integer.MAX_VALUE - n) / 2;
+		/*for (int j = n; j < Integer.MAX_VALUE; j++) {
+		    if (j % 2 == 0) {
+		    	toReturn++;
+		    }
+		}
+		*/
+		return toReturn % 10;
     }
 }
